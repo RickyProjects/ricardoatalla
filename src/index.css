@@ -1,0 +1,7 @@
+:root {
+ --bgcolor:#90B0CD;
+}
+
+body.dark {
+  --bgcolor:black;
+}
