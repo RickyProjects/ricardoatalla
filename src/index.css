@@ -1,7 +1,30 @@
 :root {
  --bgcolor:#90B0CD;
+ --barbgcolor:#7DA0C2;
+ --barbgpulse:#83A5C7;
+ --bardes1:#7DA0C2;
+ --bardes2:#93B4D3;
+ --bardes3:#A9C7E4;
+ --buttonbgcolor:#7598BA;
+ --buttonborder:#B7DEFF;
+ --activebuttonborder:#A8BFFF;
+ --circle:#B5E0FF;
+ --circleclick:#B8E0FC;
 }
 
 body.dark {
-  --bgcolor:black;
+ background-color: var(--bgcolor);
+ cursor: default;
+ --bgcolor:#1D2831;
+ --barbgcolor:#263D52;
+ --barbgpulse:#83A5C7;
+ --bardes1:#263D52;
+ --bardes2:#314D66;
+ --bardes3:#3b5c7a;
+ --buttonbgcolor:#405E7B;
+ --buttonborder:#5F70A1;
+ --activebuttonborder:#7791e0;
+ --circle:#3D5973;
+ --circleclick:#3e5b79;
 }
+
