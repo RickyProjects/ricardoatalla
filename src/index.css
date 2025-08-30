@@ -22,9 +22,45 @@ body.dark {
  --bardes2:#314D66;
  --bardes3:#3b5c7a;
  --buttonbgcolor:#405E7B;
- --buttonborder:#5F70A1;
+ --buttonborder:#84B3DE;
  --activebuttonborder:#7791e0;
  --circle:#3D5973;
  --circleclick:#3e5b79;
+}
+
+.app-wrapper.state-0 { 
+  --width: 25vw;
+  --height: 25vw;
+  --border: 50%;
+  --aboutscale: 1.05;
+  --socialsscale: 1.05;
+  --projectsscale: 1.05;
+}
+
+.app-wrapper.state-2 { 
+  --width: 30vw;
+  --height: 35vw;
+  --border: 8vw;
+  --aboutscale: 1.16;
+  --socialsscale: 1.05;
+  --projectsscale: 1.05;
+}
+
+.app-wrapper.state-3 { 
+  --width: 50vw;
+  --height: 24vw;
+  --border: 3vw;
+  --aboutscale: 1.05;
+  --socialsscale: 1.16;
+  --projectsscale: 1.05;
+}
+
+.app-wrapper.state-4 { 
+  --width: 55vw;
+  --height: 40vw;
+  --border: 10vw;
+  --aboutscale: 1.05;
+  --socialsscale: 1.05;
+  --projectsscale: 1.16;
 }
 

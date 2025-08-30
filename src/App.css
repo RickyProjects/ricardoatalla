@@ -29,8 +29,13 @@ body {
   gap: 1vh;
   padding: 1.5vh;
   z-index:10;
-  transition: background-color 0.4s ease;
+  transition: background-color 0.4s ease, 0.2s ease-in-out, height 0.5s ease;
   box-shadow: rgba(0,0,0,0.25) -0.5vh 0.5vh 0px;
+}
+
+.bar.dropdown-active {
+  height: 8vh;
+  transition: background-color 0.4s ease, height 0.6s cubic-bezier(.57,.33,.22,.85) 0.15s;
 }
 
 .bar-design1 {
@@ -149,7 +154,13 @@ body {
 
 .bar:hover{
   transform: translateY(0) scale(1.015);
-  transition: all 0.2s ease-in-out;
+}
+
+.bar button.hidden {
+  opacity: 0;
+  transform: scale(50%);
+  pointer-events: none;
+
 }
 
 .bar button{
@@ -159,17 +170,20 @@ body {
   width: 100%;
   aspect-ratio: 1/1;
   border-radius: 100%;
-  transition: ease-in-out 0.04s;
+  transition: scale ease-in-out 0.04s;
   max-height: 8vh;
+  opacity: 1;
+  transition: opacity 0.4s ease, transform 0.7s ease;
 }
 
 .bar button:hover{
-  transform: scale(1.1);
-  
+  transform: scale(1.05);
+  transition: all 0.1s ease-in-out;
 }
 
 .bar button:active{
-  transform: scale(1.02);
+  transition: all 0.07s ease-in-out;
+  transform: scale(0.98);
   border: 2px solid var(--activebuttonborder);
   
 }
@@ -200,19 +214,19 @@ body {
 
 .loading {
   background-color: var(--circle);
-  width: 20vw;
-  height: 20vw;
-  border-radius: 100vw;
-  transition: transform 0.4s ease-out, background-color 0.4s ease;
+  width: var(--width);
+  height: var(--height);
+  border-radius: var(--border);
+  transition: width 0.4s ease, height 0.4s ease, border-radius 0.4s ease, transform 0.4s ease-out, background-color 0.4s ease;
   box-shadow: rgba(0,0,0,0.25) -0.5vh 0.5vh 0px;
 }
 
 .loading:hover{
-  transform:scale(1.1);
+  transform:scale(1.07);
 }
 
 .loading:active{
-  transform:scale(1.05);
+  transform:scale(1.03);
   transition: all 0.1s ease-out;
   background: var(--circleclick);
 
@@ -228,6 +242,7 @@ body {
 .dropdown img {
   width: 100%;
   height: 100%;
+  transform: scale(1.05)
 }
 
 .aboutme {
@@ -240,6 +255,7 @@ body {
 .aboutme img {
   width: 100%;
   height: 100%;
+  transform: scale(var(--aboutscale))
 }
 
 .socials {
@@ -252,6 +268,7 @@ body {
 .socials img {
   width: 100%;
   height: 100%;
+  transform: scale(var(--socialsscale))
 }
 
 .projects {
@@ -264,6 +281,7 @@ body {
 .projects img {
   width: 100%;
   height: 100%;
+  transform: scale(var(--projectsscale))
 }
 
 .dark {
@@ -276,7 +294,30 @@ body {
 .dark img {
   width: 100%;
   height: 100%;
+  transform: scale(1.05)
 }
+
+.app-wrapper.state-0 .aboutme img,
+.app-wrapper.state-2 .aboutme img,
+.app-wrapper.state-3 .aboutme img,
+.app-wrapper.state-4 .aboutme img {
+  transform: scale(var(--aboutscale));
+}
+
+.app-wrapper.state-0 .socials img,
+.app-wrapper.state-2 .socials img,
+.app-wrapper.state-3 .socials img,
+.app-wrapper.state-4 .socials img {
+  transform: scale(var(--socialsscale));
+}
+
+.app-wrapper.state-0 .projects img,
+.app-wrapper.state-2 .projects img,
+.app-wrapper.state-3 .projects img,
+.app-wrapper.state-4 .projects img {
+  transform: scale(var(--projectsscale));
+}
+
 @keyframes loading {
   0%   { scale: 100%; box-shadow: var(--bgcolor) -0.5vh 0.5vh 0px; }
   18%  { scale: 80%; }
