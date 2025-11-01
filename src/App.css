@@ -281,11 +281,11 @@ body.dark .content-wrapper {
 }
 
 .loading:hover{
-  transform:scale(1.07);
+  transform:scale(1.03);
 }
 
 .loading:active{
-  transform:scale(1.03);
+  transform:scale(1.02);
   transition: all 0.1s ease-out;
   background: var(--circleclick);
 
@@ -393,6 +393,49 @@ button.dark img {
   line-height: 1.4;
 }
 
+.app-wrapper.state-4 .content-wrapper {
+  width: 100%;
+  height: 100%;
+  padding: clamp(12px, 2vh, 24px);
+}
+
+.content-wrapper > .ProjectsTitle {
+  width: 100%;
+  max-width: 100%;
+}
+
+.ProjectsList {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(10px, 1fr));
+  gap: 4vh 1vw;
+  width: 80%;
+  box-sizing: border-box;
+  justify-items: center;
+  align-items: start;
+  margin: 2vh auto 0;
+}
+
+.ProjectsList div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+}
+
+.tile, .slime, .powder, .soon {
+  width: 65%;
+  max-height: 35%;
+  border-radius: 25px;
+  object-fit: cover;
+  transition: transform .15s ease;
+}
+
+.content-wrapper img {
+  border: 3px solid var(--textcolor);
+}
+
+
 @keyframes loading {
   0%   { scale: 100%; box-shadow: var(--bgcolor) -0.5vh 0.5vh 0px; }
   18%  { scale: 80%; }
@@ -431,17 +474,17 @@ button.dark img {
 }
 
 @keyframes float {
-  0% { transform: translateY(0.7vh); }
+  0% { transform: translateY(0.3vh); }
   10% {  }
   20% {  }
   30% {  }
   40% {  }
-  50% { transform: translateY(-0.7vh); }
+  50% { transform: translateY(-0.3vh); }
   60% {  }
   70% {  }
   80% {  }
   90% {  }
-  100% { transform: translateY(0.7vh); }
+  100% { transform: translateY(0.3vh); }
 }
 
 @keyframes design-float {
@@ -484,4 +527,35 @@ button.dark img {
   80% {  }
   90% {  }
   100% { background-color: var(--barbgcolor); }
+}
+
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.18) 0px,
+    rgba(0, 0, 0, 0.18) 3px,
+    rgba(0, 0, 0, 0.08) 6px,
+    transparent 6px
+  );
+  mix-blend-mode: multiply;
+  opacity: 0.45;
+  animation: crt-flicker 0.2s infinite alternate;
+}
+
+@keyframes crt-flicker {
+  from { opacity: 0.42; }
+  to   { opacity: 0.51; }
 }
