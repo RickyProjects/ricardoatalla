@@ -258,8 +258,7 @@ h1{
   display: block;
   margin: 0 auto;       
   border-radius: 50%;
-  object-fit: cover;
-  border-color: 5px solid var(--textcolor);
+  border-color: var(--textcolor);
 }
 
 img.face {
@@ -274,7 +273,7 @@ img.face {
   height: auto;
   border-radius: 50%;
   box-sizing: border-box;
-  border-color: 5px solid var(--textcolor);
+  border-color: var(--textcolor);
 }
 
 body.dark .content-wrapper {
@@ -351,10 +350,11 @@ body.dark .content-wrapper {
   padding: 0;
 }
 
-.dark img {
+button.dark img {
   width: 100%;
   height: 100%;
   transform: scale(1.05)
+
 }
 
 .app-wrapper.state-0 .aboutme img,
