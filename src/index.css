@@ -1,0 +1,70 @@
+:root {
+ --bgcolor:#90B0CD;
+ --barbgcolor:#7DA0C2;
+ --barbgpulse:#83A5C7;
+ --bardes1:#7DA0C2;
+ --bardes2:#93B4D3;
+ --bardes3:#A9C7E4;
+ --buttonbgcolor:#7598BA;
+ --buttonborder:#B7DEFF;
+ --activebuttonborder:#A8BFFF;
+ --circle:#B5E0FF;
+ --circleclick:#B8E0FC;
+ --textcolor:#000000;
+ --linkcolor: #2A4A6E;
+}
+
+body.dark {
+ background-color: var(--bgcolor);
+ cursor: default;
+ --bgcolor:#1D2831;
+ --barbgcolor:#263D52;
+ --barbgpulse:#83A5C7;
+ --bardes1:#263D52;
+ --bardes2:#314D66;
+ --bardes3:#3b5c7a;
+ --buttonbgcolor:#405E7B;
+ --buttonborder:#84B3DE;
+ --activebuttonborder:#7791e0;
+ --circle:#3D5973;
+ --circleclick:#3e5b79;
+ --textcolor:#ffffff;
+ --linkcolor: #fffccf;
+}
+
+.app-wrapper.state-0 { 
+  --width: 25vw;
+  --height: 25vw;
+  --border: 50%;
+  --aboutscale: 1.05;
+  --socialsscale: 1.05;
+  --projectsscale: 1.05;
+}
+
+.app-wrapper.state-2 { 
+  --width: 40vw;
+  --height: 80vh;
+  --border: 8vw;
+  --aboutscale: 1.16;
+  --socialsscale: 1.05;
+  --projectsscale: 1.05;
+}
+
+.app-wrapper.state-3 { 
+  --width: 50vw;
+  --height: 64vh;
+  --border: 3vw;
+  --aboutscale: 1.05;
+  --socialsscale: 1.16;
+  --projectsscale: 1.05;
+}
+
+.app-wrapper.state-4 { 
+  --width: 64vw;
+  --height: 90vh;
+  --border: 10vw;
+  --aboutscale: 1.05;
+  --socialsscale: 1.05;
+  --projectsscale: 1.16;
+}
+
